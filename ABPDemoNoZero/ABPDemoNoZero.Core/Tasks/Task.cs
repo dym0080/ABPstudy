@@ -6,11 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ABPDemoNoZero.People;
+using Abp.Domain.Entities.Auditing;
 
 namespace ABPDemoNoZero.Tasks
 {
     [Table("Tasks")]
-    public class Task : Entity<long>
+    public class Task : Entity<long>, IHasCreationTime
     {
         [ForeignKey("AssignedPersonId")]
         public virtual Person AssignedPerson { get; set; }

@@ -92,6 +92,7 @@
   <ItemGroup>
     <Compile Include="ABPDemoNoZeroApplicationModule.cs" />
     <Compile Include="ABPDemoNoZeroAppServiceBase.cs" />
+    <Compile Include="DtoMappings.cs" />
     <Compile Include="People\Dtos\GetAllPeopleOutput.cs" />
     <Compile Include="People\Dtos\PersonDto.cs" />
     <Compile Include="People\IPersonAppService.cs" />
