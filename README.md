@@ -3,7 +3,7 @@ learn asp.net boilerplate
 
 
 ###ABPDemoNoZero
-我的第一ABP框架实践  
+我的第一个ABP框架实践  
 
 参考资料：  
 [1.ASP.NET Boilerplate入门](http://www.cnblogs.com/mienreal/p/4532077.html)  
