@@ -27,6 +27,11 @@
                     url: '/new',
                     templateUrl: '/App/Main/views/task/new.cshtml',
                     menu: 'NewTask' //Matches to name of 'NewTask' menu in ABPDemoNoZeroNavigationProvider
+                })
+                .state('Dictionary', {
+                    url: '/',
+                    templateUrl: '/App/Main/views/Dictionary/list.cshtml',
+                    menu: 'DictionaryList' 
                 });
         }
     ]);

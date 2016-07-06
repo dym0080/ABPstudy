@@ -1,0 +1,30 @@
+﻿<div class="panel panel-default" ng-controller="sts.views.dictionary.list as vm">
+
+    <div class="panel-heading" style="position: relative;">
+        <div class="row">
+            <!-- Title -->
+            <h3 class="panel-title col-xs-6">
+                @L("DictionaryList") - <span>{{vm.getDictionaryCountText()}}</span>
+            </h3>
+        </div>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>字典编号</th>
+                    <th>字典名称</th>
+                    <th>字典描述</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="dictionary in vm.dictionarys">
+                    <td>{{dictionary.code}}</td>
+                    <td>{{dictionary.name}}</td>
+                    <td>{{dictionary.description}}</td>            
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

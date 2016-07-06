@@ -213,6 +213,8 @@
     <Content Include="App\Main\images\abp-logo.png" />
     <Content Include="App\Main\main.css" />
     <Content Include="App\Main\main.min.css" />
+    <Content Include="App\Main\views\Dictionary\list.js" />
+    <Content Include="App\Main\views\Dictionary\new.js" />
     <Content Include="App\Main\views\layout\header.js" />
     <Content Include="App\Main\views\layout\layout.js" />
     <Content Include="App\Main\views\task\list.js" />
@@ -345,6 +347,8 @@
     <Content Include="App\Main\views\task\list.cshtml" />
     <Content Include="App\Main\views\task\new.cshtml" />
     <Content Include="App\Main\web.config" />
+    <Content Include="App\Main\views\Dictionary\list.cshtml" />
+    <Content Include="App\Main\views\Dictionary\new.cshtml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
@@ -1188,7 +1192,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>6234</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:6234/</IISUrl>
+          <IISUrl>http://localhost:6235/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

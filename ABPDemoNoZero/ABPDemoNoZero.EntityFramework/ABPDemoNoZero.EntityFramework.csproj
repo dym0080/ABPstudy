@@ -104,10 +104,15 @@
   <ItemGroup>
     <Compile Include="EntityFramework\ABPDemoNoZeroDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\ABPDemoNoZeroRepositoryBase.cs" />
+    <Compile Include="EntityFramework\Repositories\DictionaryRepository.cs" />
     <Compile Include="EntityFramework\Repositories\TaskRepository.cs" />
     <Compile Include="Migrations\201606240713107_InitialCreatebyDym.cs" />
     <Compile Include="Migrations\201606240713107_InitialCreatebyDym.Designer.cs">
       <DependentUpon>201606240713107_InitialCreatebyDym.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607010319507_add dictionary.cs" />
+    <Compile Include="Migrations\201607010319507_add dictionary.Designer.cs">
+      <DependentUpon>201607010319507_add dictionary.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ABPDemoNoZeroDataModule.cs" />
@@ -126,6 +131,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201606240713107_InitialCreatebyDym.resx">
       <DependentUpon>201606240713107_InitialCreatebyDym.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607010319507_add dictionary.resx">
+      <DependentUpon>201607010319507_add dictionary.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

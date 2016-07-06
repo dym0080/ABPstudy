@@ -92,6 +92,10 @@
   <ItemGroup>
     <Compile Include="ABPDemoNoZeroApplicationModule.cs" />
     <Compile Include="ABPDemoNoZeroAppServiceBase.cs" />
+    <Compile Include="Dictionarys\DictionaryAppService.cs" />
+    <Compile Include="Dictionarys\Dtos\DictionaryDto.cs" />
+    <Compile Include="Dictionarys\Dtos\GetDictionarysOutput.cs" />
+    <Compile Include="Dictionarys\IDictionaryAppService.cs" />
     <Compile Include="DtoMappings.cs" />
     <Compile Include="People\Dtos\GetAllPeopleOutput.cs" />
     <Compile Include="People\Dtos\PersonDto.cs" />

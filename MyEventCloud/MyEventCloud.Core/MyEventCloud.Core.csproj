@@ -90,6 +90,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\Event.cs" />
+    <Compile Include="Events\EventManager.cs" />
+    <Compile Include="Events\EventRegistration.cs" />
+    <Compile Include="Events\EventRegistrationPolicy.cs" />
     <Compile Include="MyEventCloudConsts.cs" />
     <Compile Include="MyEventCloudCoreModule.cs" />
     <Compile Include="Authorization\MyEventCloudAuthorizationProvider.cs" />

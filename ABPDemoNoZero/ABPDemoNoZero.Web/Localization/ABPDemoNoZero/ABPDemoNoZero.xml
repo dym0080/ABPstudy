@@ -3,6 +3,7 @@
   <texts>
     <text name="TaskSystem" value="Task System" />
     <text name="TaskList" value="Task List" />
+    <text name="DictonaryList" value="Dictonary List" />
     <text name="NewTask" value="New Task" />
     <text name="Xtasks" value="{0} tasks" />
     <text name="AllTasks" value="All tasks" />
@@ -14,6 +15,7 @@
     <text name="SelectPerson" value="Select person" />
     <text name="CreateTheTask" value="Create the task" />
     <text name="TaskUpdatedMessage" value="Task has been successfully updated." />
+    <text name="DictionaryUpdatedMessage" value="Dictionary has been successfully updated." />
     <text name="TaskCreatedMessage" value="Task {0} has been created successfully." />
   </texts>
 </localizationDictionary>

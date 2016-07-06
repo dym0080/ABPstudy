@@ -1,3 +1,4 @@
+using ABPDemoNoZero.Dictionarys;
 using ABPDemoNoZero.People;
 using System.Data.Entity.Migrations;
 
@@ -15,13 +16,14 @@ namespace ABPDemoNoZero.Migrations
         {
             // This method will be called every time after migrating to the latest version.
             // You can add any seed data here...
-            context.People.AddOrUpdate(
-           p => p.Name,
-           new Person { Name = "Isaac Asimov" },
-           new Person { Name = "Thomas More" },
-           new Person { Name = "George Orwell" },
-           new Person { Name = "wwww paan" },
-           new Person { Name = "Douglas Adams" }
+
+            context.Dictionary.AddOrUpdate(
+           p => p.Code,
+           new Dictionary { Code = "00001001",Name="IPhone5s" },
+           new Dictionary { Code = "00001002", Name = "IPhone6s" },
+           new Dictionary { Code = "00001003", Name = "小米4" },
+           new Dictionary { Code = "00001004", Name = "荣耀7" },
+           new Dictionary { Code = "00001005", Name = "照相机" }
            );
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Abp.EntityFramework;
+using ABPDemoNoZero.Dictionarys;
 using ABPDemoNoZero.People;
 using ABPDemoNoZero.Tasks;
 using System.Data.Entity;
@@ -10,6 +11,7 @@ namespace ABPDemoNoZero.EntityFramework
         //TODO: Define an IDbSet for each Entity...
         public virtual IDbSet<Task> Tasks { get; set; }
         public virtual IDbSet<Person> People { get; set; }
+        public virtual IDbSet<Dictionary> Dictionary { get; set; }
 
         //Example:
         //public virtual IDbSet<User> Users { get; set; }

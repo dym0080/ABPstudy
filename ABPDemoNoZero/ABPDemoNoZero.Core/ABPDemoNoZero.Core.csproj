@@ -84,6 +84,8 @@
   <ItemGroup>
     <Compile Include="ABPDemoNoZeroConsts.cs" />
     <Compile Include="ABPDemoNoZeroCoreModule.cs" />
+    <Compile Include="Dictionarys\Dictionary.cs" />
+    <Compile Include="Dictionarys\IDictionaryRepository.cs" />
     <Compile Include="People\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tasks\ITaskRepository.cs" />

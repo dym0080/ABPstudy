@@ -45,6 +45,13 @@ namespace ABPDemoNoZero.Web
                        url: "#/new",
                        icon: "fa fa-asterisk"
                        )
+               ).AddItem(
+                   new MenuItemDefinition(
+                       "DictionaryList",
+                       new LocalizableString("DictionaryList", ABPDemoNoZeroConsts.LocalizationSourceName),
+                       url: "#/",
+                       icon: "fa fa-asterisk"
+                       )
                );
         }
     }
