@@ -49,7 +49,7 @@ namespace ABPDemoNoZero.Web
                    new MenuItemDefinition(
                        "DictionaryList",
                        new LocalizableString("DictionaryList", ABPDemoNoZeroConsts.LocalizationSourceName),
-                       url: "#/",
+                       url: "#/dictionary",
                        icon: "fa fa-asterisk"
                        )
                );

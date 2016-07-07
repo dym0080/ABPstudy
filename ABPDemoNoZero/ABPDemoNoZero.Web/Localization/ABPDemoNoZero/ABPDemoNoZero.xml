@@ -3,7 +3,7 @@
   <texts>
     <text name="TaskSystem" value="Task System" />
     <text name="TaskList" value="Task List" />
-    <text name="DictonaryList" value="Dictonary List" />
+    <text name="DictionaryList" value="Dictonary List" />
     <text name="NewTask" value="New Task" />
     <text name="Xtasks" value="{0} tasks" />
     <text name="AllTasks" value="All tasks" />

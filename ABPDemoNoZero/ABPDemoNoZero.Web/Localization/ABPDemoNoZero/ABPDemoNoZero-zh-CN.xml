@@ -3,7 +3,7 @@
   <texts>
     <text name="TaskSystem" value="任务管理" />
     <text name="TaskList" value="任务列表" />
-    <text name="DictonaryList" value="字典项列表" />
+    <text name="DictionaryList" value="字典项列表" />
     <text name="NewTask" value="新任务" />
     <text name="Xtasks" value="{0}个任务" />
     <text name="AllTasks" value="全部任务" />

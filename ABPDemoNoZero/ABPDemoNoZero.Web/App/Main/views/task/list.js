@@ -17,12 +17,14 @@
                 vm.refreshTasks();
             });
 
-            vm.refreshTasks = function() {
+            vm.refreshTasks = function () {
                 abp.ui.setBusy( //Set whole page busy until getTasks complete
                     null,
                     taskService.getTasks({ //Call application service method directly from javascript
                         state: $scope.selectedTaskState > 0 ? $scope.selectedTaskState : null
-                    }).success(function(data) {
+                    }).success(function (data) {
+                        
+                        console.log(data);
                         vm.tasks = data.tasks;
                     })
                 );

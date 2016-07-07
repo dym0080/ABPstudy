@@ -213,8 +213,8 @@
     <Content Include="App\Main\images\abp-logo.png" />
     <Content Include="App\Main\main.css" />
     <Content Include="App\Main\main.min.css" />
-    <Content Include="App\Main\views\Dictionary\list.js" />
-    <Content Include="App\Main\views\Dictionary\new.js" />
+    <Content Include="App\Main\views\dictionary\list.js" />
+    <Content Include="App\Main\views\dictionary\new.js" />
     <Content Include="App\Main\views\layout\header.js" />
     <Content Include="App\Main\views\layout\layout.js" />
     <Content Include="App\Main\views\task\list.js" />
@@ -347,8 +347,8 @@
     <Content Include="App\Main\views\task\list.cshtml" />
     <Content Include="App\Main\views\task\new.cshtml" />
     <Content Include="App\Main\web.config" />
-    <Content Include="App\Main\views\Dictionary\list.cshtml" />
-    <Content Include="App\Main\views\Dictionary\new.cshtml" />
+    <Content Include="App\Main\views\dictionary\list.cshtml" />
+    <Content Include="App\Main\views\dictionary\new.cshtml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />

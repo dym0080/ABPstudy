@@ -11,43 +11,20 @@
 
             vm.dictionarys = [];
 
-            $scope.selectedTaskState = 0;
+            
 
-            $scope.$watch('selectedTaskState', function(value) {
-                vm.refreshTasks();
+            //vm.people = []; //TODO: Move Person combo to a directive?
+
+            //personService.getAllPeople().success(function (data) {
+            //    vm.people = data.people;
+            //});
+
+
+            dictionaryService.getDictionarys().success(function (data) {
+                console.log("dictionarys data");
+                vm.dictionarys = data.dictionarys;
             });
-
-            vm.refreshTasks = function() {
-                abp.ui.setBusy( //Set whole page busy until getTasks complete
-                    null,
-                    dictionaryService.getDictionarys({ //Call application service method directly from javascript
-                        state: $scope.selectedTaskState > 0 ? $scope.selectedTaskState : null
-                    }).success(function(data) {
-                        vm.tasks = data.tasks;
-                    })
-                );
-            };
-
-            vm.changeDictionaryState = function (dictionary) {
-                //var newState;
-                //if (task.state == 1) {
-                //    newState = 2; //Completed
-                //} else {
-                //    newState = 1; //Active
-                //}
-
-                dictionaryService.updateDictionary({
-                    dictionaryId: dictionary.id,
-                    state: newState
-                }).success(function() {
-                    dictionary.state = newState;
-                    abp.notify.info(vm.localize('TaskUpdatedMessage'));
-                });
-            };
-
-            vm.getDictionaryCountText = function () {
-                return abp.utils.formatString(vm.localize('Xtasks'), vm.dictionarys.length);
-            };
+            
         }
     ]);
 })();
