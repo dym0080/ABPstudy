@@ -1,0 +1,52 @@
+﻿<div class="portlet light bordered" ng-controller="app.views.softlicense as vm">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon icon-grid font-green-sharp"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">卡密列表-[{{vm.softName}}]</span>
+        </div>
+        <div class="actions">
+            <button type="button" class="btn btn-primary" ng-click="vm.generateSoftLicense()"><i class="icon icon-plus"></i>生成卡密</button>
+        </div>
+    </div>
+
+    <div class="portlet-body" style="padding-top: 0px">
+        <milo-Search search-items="searchItems" search-conds="searchConds" searchHandle="queryData()"></milo-Search>
+
+        <div class="table-scrollable ">
+            <table class="table table-bordered table-hover table-striped table-advance">
+                <thead>
+                    <tr>
+                        <th style="width: 40px; text-align: center"> ID </th>
+                        <th style="width: 40px; text-align: center"> 类型 </th>
+                        <th style="width: 130px; text-align: center"> 卡密 </th>
+                        <th style="width: 40px; text-align: center"> 价格 </th>
+                        <th style="width: 80px; text-align: center"> 状态 </th>
+                        <th style="">使用会员 </th>
+                        <th style="width: 160px; text-align: center"> 使用时间 </th>
+                        <th style="width: 160px; text-align: center"> 创建时间 </th>
+                        <th style="width: 100px; text-align: center"> 操作 </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr role="row" ng-repeat="item in vm.items" class="even">
+                        <td style="text-align: center; vertical-align: middle">{{item.id}}</td>
+                        <td style="text-align: center; vertical-align: middle">{{item.licenseTypeAlias}}</td>
+                        <td style="text-align: center; vertical-align: middle">{{item.licenseNo}}</td>
+                        <td style="text-align: center; vertical-align: middle">{{item.price}}</td>
+                        <td style="text-align: center; vertical-align: middle">{{item.statusAlias}}</td>
+                        <td style="vertical-align: middle">{{item.softUser_LoginName}}</td>
+                        <td style="text-align: center; vertical-align: middle">{{item.useTime | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <td style="text-align: center; vertical-align: middle">{{item.creationTime | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <td style="text-align: center; vertical-align: middle" class="table-operating">
+                            <a href="javascript:;" ng-click="vm.delete(item.id)">删除</a><span class="divider" ng-if="item.status==2 || item.status==1 || item.status==0">|</span>
+                            <a href="javascript:;" ng-click="vm.sellLicense(item.id)" ng-if="item.status==0">售出</a>
+                            <a href="javascript:;" ng-click="vm.returnLicense(item.id)" ng-if="item.status==2 || item.status==1" style="color: red">退货</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <milo-Pagination page-info="pageInfo" pagingHandle="paging()"></milo-Pagination>
+    </div>
+</div>

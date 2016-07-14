@@ -1,0 +1,20 @@
+﻿<div>
+    <form name="createForm" role="form" novalidate class="form-validation">
+        <div class="modal-header">
+            <h4 class="modal-title">                
+                <span>授权</span>
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                <input class="form-control" type="text" name="licenseNo" ng-class="{'edited':vm.data.licenseNo}" ng-model="vm.data.licenseNo" required maxlength="50">
+                <label>卡密</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button ng-disabled="vm.saving" type="button" class="btn btn-default" ng-click="vm.cancel()">取消</button>
+            <button type="submit" button-busy="vm.saving" busy-text="保存中..." class="btn btn-primary blue" ng-click="vm.save()" 
+                    ng-disabled="createForm.$invalid"><i class="fa fa-save"></i> <span>保存</span></button>
+        </div>
+    </form>
+</div>

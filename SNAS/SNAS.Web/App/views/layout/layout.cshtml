@@ -1,0 +1,163 @@
+﻿@using System.Threading
+@using System.Web.Optimization
+
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" ng-app="app">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+
+<head>
+    <meta charset="utf-8" />
+    <title>软件网络验证系统 | 后台管理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    @Styles.Render("~/Bundles/App/main/css")
+    
+    <script type="text/javascript">
+        //This is used to get the application's root path from javascript. It's useful if you're running application in a virtual directory under IIS.
+        var abp = abp || {}; abp.appPath = '@ApplicationPath';
+    </script>
+
+    
+
+</head>
+<!-- END HEAD -->
+
+<body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo page-md" >
+    <!-- BEGIN HEADER -->
+    <div class="page-header navbar navbar-fixed-top" style="z-index:1">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner ">
+            <!-- BEGIN LOGO -->
+            <div class="page-logo">
+                <a href="/">
+                    <img src="/Assets/Theme/layouts/layout4/img/logo.png" alt="logo" class="logo-default" />
+                </a>
+                @*<div class="menu-toggler sidebar-toggler">
+                   
+                </div>*@
+            </div>
+            <!-- END LOGO -->
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+            @*<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>*@
+            <!-- END RESPONSIVE MENU TOGGLER -->
+            
+            <!-- BEGIN PAGE TOP -->
+            <div class="page-top">
+                
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="separator hide"> </li>
+                       
+                        <!-- BEGIN USER LOGIN DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-user dropdown-dark" ng-controller="app.views.layout as vm">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <span class="username username-hide-on-mobile"> {{vm.getShownUserName()}} </span>
+                                <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
+                                <img alt="" class="img-circle" src="/Assets/Theme/layouts/layout4/img/avatar2.jpg" />
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-default">
+                                <li>
+                                    <a href="javascript:void(0)" ng-click="vm.chgPassword();">
+                                        <i class="icon-lock"></i> 修改密码
+                                    </a>
+                                </li>                                
+                                <li class="divider"> </li>                                
+                                <li>
+                                    <a href="@Url.Action("Logout", "Account")"><i class="fa fa-sign-out"></i>退出系统</a>                                    
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END USER LOGIN DROPDOWN -->
+                        <!-- BEGIN QUICK SIDEBAR TOGGLER -->
+                       
+                        <!-- END QUICK SIDEBAR TOGGLER -->
+                    </ul>
+                </div>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END PAGE TOP -->
+        </div>
+        <!-- END HEADER INNER -->
+    </div>
+    <!-- END HEADER -->
+<!-- BEGIN HEADER & CONTENT DIVIDER -->
+
+<div class="clearfix">
+  
+</div>
+
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- BEGIN CONTAINER -->
+<div class="page-container" ng-controller="app.views.layout as vm">
+    
+    <div class="row" style="margin-left: -20px; margin-right: -20px;display: none" id="layout-loading-progress">
+        <div class="progress progress-striped active" style="padding: 0; margin: 0; margin-top: -20px; margin-left: 0px;margin-right: 0px; display: block">
+            <div class="progress-bar progress-bar-success" id="layout-loading-progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+            </div>
+        </div>
+    </div>
+
+    <div ng-include="'/App/views/layout/leftmenu.cshtml'"></div>
+
+
+
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <!-- BEGIN CONTENT BODY -->
+        <div class="page-content" style="padding-top: 0px">
+
+            <!-- BEGIN PAGE BASE CONTENT -->
+            <div class="row" id="content-container">
+                <div class="col-md-12" ui-view>
+
+                </div>
+            </div>
+            <!-- END PAGE BASE CONTENT -->
+        </div>
+        <!-- END CONTENT BODY -->
+    </div>
+    <!-- END CONTENT -->
+    <!-- BEGIN QUICK SIDEBAR -->
+    <a href="javascript:;" class="page-quick-sidebar-toggler">
+        <i class="icon-login"></i>
+    </a>
+
+    <!-- END QUICK SIDEBAR -->
+</div>
+    <!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+    @*<div class="page-footer">
+        <div class="page-footer-inner">
+            2014 &copy; Metronic by keenthemes.
+            <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
+        </div>
+        <div class="scroll-to-top">
+            <i class="icon-arrow-up"></i>
+        </div>
+    </div>*@
+    <!-- END FOOTER -->
+    <!--[if lt IE 9]>
+           @Scripts.Render("~/Bundles/App/iefix")
+    <![endif]-->
+
+    @Scripts.Render("~/Bundles/App/main/js")
+    <script src="~/api/AbpServiceProxies/GetAll"></script>
+    <script src="~/api/AbpServiceProxies/GetAll?type=angular"></script>
+    <script src="~/AbpScripts/GetScripts" type="text/javascript"></script>
+    @Scripts.Render("~/Bundles/App/view/js")
+
+   
+</body>
+
+</html>

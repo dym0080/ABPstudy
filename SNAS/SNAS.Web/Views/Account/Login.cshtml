@@ -1,0 +1,90 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>阅读联盟管理系统 | 系统登录</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">       
+
+
+    @Styles.Render("~/Bundles/App/login/css")
+ 
+    
+    <link rel="shortcut icon" href="/favicon.ico" />
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="page-md login">
+    <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+    <div class="menu-toggler sidebar-toggler">
+    </div>
+    <!-- END SIDEBAR TOGGLER BUTTON -->
+    <!-- BEGIN LOGO -->
+    <div class="logo">
+        <a href="/">
+            <img src="/Assets/Theme/layouts/layout4/img/logo.png" alt="" />
+        </a>
+    </div>
+    <!-- END LOGO -->
+    <!-- BEGIN LOGIN -->
+    <div class="content">
+        <!-- BEGIN LOGIN FORM -->
+        <form class="login-form" action="index.html" method="post">
+            <h3 class="form-title">系统登录</h3>
+            <div class="alert alert-danger display-hide">
+                <button class="close" data-close="alert"></button>
+                <span>
+                    请输入账号及密码.
+                </span>
+            </div>
+            <div class="form-group">
+                <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                <label class="control-label visible-ie8 visible-ie9">账号</label>
+                <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="账号" name="username" id="username" />
+            </div>
+            <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9">密码</label>
+                <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="密码" name="password" id="password" />
+            </div>
+            <input id="ReturnUrlHash" type="hidden" name="returnUrlHash" />
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success uppercase pull-right">登&nbsp;录</button>
+                <label class="rememberme check">
+                    <input type="checkbox" name="remember" id="remember" value="1" />记住用户名
+                </label>                
+            </div>
+            
+        </form>
+        <!-- END LOGIN FORM -->
+      
+        
+    </div>
+    <div class="copyright">
+        @*2014 © Metronic. Admin Dashboard Template.*@
+    </div>
+    
+    <!--[if lt IE 9]>
+        @Scripts.Render("~/Bundles/App/iefix")
+    <![endif]-->
+
+    @Scripts.Render("~/Bundles/App/login/js")
+    
+    <script>
+        //jQuery(document).ready(function () {
+        //    Metronic.init(); // init metronic core components
+        //    Layout.init(); // init current layout
+        //    Login.init();
+        //    Demo.init();
+        //});
+    </script>
+    <!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

@@ -1,0 +1,34 @@
+﻿<div class="page-sidebar-wrapper"  ng-controller="app.views.layout.leftmenu as vm">
+    <div class="page-sidebar navbar-collapse collapse">        
+        <ul class="page-sidebar-menu  " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" 
+            ng-class="{'page-sidebar-menu-closed': settings.layout.pageSidebarClosed}" 
+            ng-if="vm.menu.items.length">              
+                
+            <li ng-repeat="menuItem in vm.menu.items" ui-sref-active="active" ng-class="{'active':vm.checkIsSelect(menuItem.name)}" class="nav-item " >                 
+
+                <!--没有子菜单的情况-->
+                <a ui-sref="{{menuItem.url}}" ng-if="!menuItem.items.length">
+                    <i class="{{menuItem.icon}}"></i>
+                    <span class="title">{{menuItem.displayName}}</span>
+                </a>
+
+                <!--有子菜单的情况-->
+                <a href="javascript:;" class="nav-link nav-toggle" ng-if="menuItem.items.length" >
+                    <i class="{{menuItem.icon}}"></i>
+                    <span class="title">{{menuItem.displayName}}</span>
+                    <span class="arrow "></span>
+                </a>
+                
+                <ul class="sub-menu" ng-if="menuItem.items.length">                    
+                    <li ng-repeat="childMenuItem in menuItem.items" ng-class="{'active':vm.checkIsSelect(childMenuItem.name)}"  class="nav-item start " >
+                        <a ui-sref="{{childMenuItem.url}}" ng-if="!childMenuItem.items.length" class="nav-link">
+                            <i class="{{childMenuItem.icon}}"></i>
+                            <span class="title">{{childMenuItem.displayName}}</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+    </div>
+</div>

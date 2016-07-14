@@ -1,0 +1,36 @@
+﻿<div>
+    <form name="createForm" role="form" novalidate class="form-validation">
+        <div class="modal-header">
+            <h4 class="modal-title">                
+                <span>多开配置</span>
+            </h4>
+        </div>
+        <div class="modal-body">
+            
+            <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                <select class="form-control" name="moreOpenRange" ng-class="{'edited':vm.data.moreOpenRange}" ng-model="vm.data.moreOpenRange" required>
+                    <option value=""></option>
+                    <option value="0">同一机器</option>
+                    <option value="1">同ip</option>
+                    <option value="2">所有电脑</option>
+                </select>
+                <label>多开</label>
+            </div>
+
+            <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                <input class="form-control" type="number" name="verifyCycle" ng-class="{'edited':vm.data.verifyCycle}" ng-model="vm.data.verifyCycle" required maxlength="50">
+                <label>校验间隔(s)</label>
+            </div>
+            <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                <input class="form-control" type="number" name="limitCount" ng-class="{'edited':vm.data.limitCount}" ng-model="vm.data.limitCount" required maxlength="50">
+                <label>多开数量</label>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button ng-disabled="vm.saving" type="button" class="btn btn-default" ng-click="vm.cancel()">取消</button>
+            <button type="submit" button-busy="vm.saving" busy-text="保存中..." class="btn btn-primary blue" ng-click="vm.save()" 
+                    ng-disabled="createForm.$invalid"><i class="fa fa-save"></i> <span>保存</span></button>
+        </div>
+    </form>
+</div>

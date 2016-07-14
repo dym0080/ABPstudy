@@ -1,0 +1,23 @@
+﻿<div class="row">
+    <div class="col-md-12" ng-show="pageInfo.itemCount===0">
+        <span>暂无数据</span>
+    </div>
+    <div class="col-md-5 col-sm-5" style="vertical-align: middle" ng-show="pageInfo.itemCount>0">
+        <div class="dataTables_info" role="status" style="vertical-align: middle; padding-top: 12px;">第{{pageInfo.pageIndex}}页,共{{pageInfo.pageCount}}页 当前显示第{{pageInfo.begin}}-{{pageInfo.end}}条记录,共{{pageInfo.totalCount}}条记录</div>
+    </div>
+    <div class="col-md-7 col-sm-7 " ng-if="pageInfo.itemCount>0">
+        <div class="dataTables_paginate paging_bootstrap_full_number pull-right">
+            <ul class="pagination" style="visibility: visible;">
+                <li class="prev {{status.firstEnable?'':'disabled'}}" ng-click="gotoFirst()"><a href="javascript:void(0);" title="First"><i class="fa fa-angle-double-left"></i></a></li>
+                <li class="prev {{status.prevEnable?'':'disabled'}}" ng-click="prevPage()"><a href="javascript:void(0);" title="Prev"><i class="fa fa-angle-left"></i></a></li>
+                <li class="disabled">
+                    <a href="javascript:void(0);">{{pageInfo.pageIndex}}/{{pageInfo.pageCount}}</a>
+                </li>
+                <li class="next {{status.nextEnable?'':'disabled'}}" ng-click="nextPage();"><a href="javascript:void(0);" title="Next"><i class="fa fa-angle-right"></i></a></li>
+                <li class="next {{status.lastEnable?'':'disabled'}}" ng-click="gotoLast();"><a href="javascript:void(0);" title="Last"><i class="fa fa-angle-double-right"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+

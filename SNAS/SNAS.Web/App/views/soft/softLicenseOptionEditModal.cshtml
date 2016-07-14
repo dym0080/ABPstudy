@@ -1,0 +1,33 @@
+﻿<div>
+    <form name="createForm" role="form" novalidate class="form-validation">
+        <div class="modal-header">
+            <h4 class="modal-title">                
+                <span>修改软件价格</span>
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                <select class="form-control" name="licenseType" ng-class="{'edited':vm.data.licenseType}" ng-model="vm.data.licenseType" required>
+                    <option value=""></option>
+                    <option value="0">月</option>
+                    <option value="1">周</option>
+                    <option value="2">天</option>
+                    <option value="3">年</option>
+                    <option value="4">小时</option>
+                    <option value="5">永久</option>
+                </select>
+                <label>类型</label>
+            </div>
+
+            <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                <input class="form-control" type="number" name="price" ng-class="{'edited':vm.data.price}" ng-model="vm.data.price" required maxlength="50">
+                <label>销售价格</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button ng-disabled="vm.saving" type="button" class="btn btn-default" ng-click="vm.cancel()">取消</button>
+            <button type="submit" button-busy="vm.saving" busy-text="保存中..." class="btn btn-primary blue" ng-click="vm.save()" 
+                    ng-disabled="createForm.$invalid"><i class="fa fa-save"></i> <span>保存</span></button>
+        </div>
+    </form>
+</div>

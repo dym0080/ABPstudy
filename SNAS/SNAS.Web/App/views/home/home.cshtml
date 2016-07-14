@@ -1,0 +1,121 @@
+﻿<div class="portlet light bordered" ng-controller="app.views.home as vm">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon icon-home"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">首页</span>
+        </div>
+    </div>
+
+    <div class="portlet-body">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-stat blue">
+                    <div class="visual">
+                        <i class="fa fa-comments"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            <span data-counter="counterup" data-value="1349">{{vm.statistics.soft}}</span>
+                        </div>
+                        <div class="desc"> 软件总数 </div>
+                    </div>
+                    <a class="more" href="/#/soft">
+                        查看详情
+                        <i class="m-icon-swapright m-icon-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-stat red">
+                    <div class="visual">
+                        <i class="fa fa-bar-chart-o"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            <span data-counter="counterup" data-value="12,5">{{vm.statistics.softUser}}</span>
+                        </div>
+                        <div class="desc"> 用户总数 </div>
+                    </div>
+                    <a class="more" href="/#/softuser">
+                        查看详情
+                        <i class="m-icon-swapright m-icon-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-stat green">
+                    <div class="visual">
+                        <i class="fa fa-shopping-cart"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            <span data-counter="counterup" data-value="549">{{vm.statistics.totalInCome}}</span>￥
+                        </div>
+                        <div class="desc"> 收入总数 </div>
+                    </div>
+                    <a class="more" href="/#/finance">
+                        查看详情
+                        <i class="m-icon-swapright m-icon-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard-stat purple">
+                    <div class="visual">
+                        <i class="fa fa-globe"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            +
+                            <span data-counter="counterup" data-value="89">{{vm.statistics.todayInCome}}</span>￥
+                        </div>
+                        <div class="desc"> 今日收入 </div>
+                    </div>
+                    <a class="more" href="/#/finance">
+                        查看详情
+                        <i class="m-icon-swapright m-icon-white"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+
+        <div class="row" style="margin-top:30px">
+            <div class="col-md-6 col-sm-6">
+                <!-- BEGIN PORTLET-->
+                <div class="portlet light bordered">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="icon-bar-chart font-green"></i>
+                            <span class="caption-subject font-green bold uppercase">最近7日收入</span>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <milo-Echart-Line id="main" legend="legend1" item="item1" data="data1"></milo-Echart-Line>
+
+                    </div>
+                </div>
+                <!-- END PORTLET-->
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <!-- BEGIN PORTLET-->
+                <div class="portlet light bordered">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="icon-share font-red-sunglo hide"></i>
+                            <span class="caption-subject font-red-sunglo bold uppercase">最近7日新增授权</span>
+                        </div>
+                        
+                    </div>
+                    <div class="portlet-body">
+                        <milo-Echart-Line id="main2" legend="legend2" item="item2" data="data2"></milo-Echart-Line>
+                        
+                    </div>
+                </div>
+                <!-- END PORTLET-->
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+﻿<div class="portlet light bordered" ng-controller="app.views.mcodechangelog as vm">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon icon-grid font-green-sharp"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">授权换绑记录</span>
+        </div>
+    </div>
+
+    <div class="portlet-body" style="padding-top: 0px">
+        <milo-Search search-items="searchItems" search-conds="searchConds" searchHandle="queryData()"></milo-Search>
+
+        <div class="table-scrollable ">
+            <table class="table table-bordered table-hover table-striped table-advance">
+                <thead>
+                    <tr>
+                        <th style="width: 40px; text-align: center"> ID </th>
+                        <th style="">旧机器码 </th>
+                        <th style="">新机器码 </th>
+                        <th style="width: 80px; text-align: center"> 状态 </th>
+                        <th style="width: 160px; text-align: center"> 创建时间 </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr role="row" ng-repeat="item in vm.items" class="even">
+                        <td style="text-align: center; vertical-align: middle">{{item.id}}</td>
+                        <td style="text-align: left; vertical-align: middle">{{item.oldMCode}}</td>
+                        <td style="text-align: left; vertical-align: middle">{{item.newMCode}}</td>
+                        <td style="text-align: center; vertical-align: middle">{{item.sourceAlias}}</td>
+                        <td style="text-align: center; vertical-align: middle">{{item.creationTime | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <milo-Pagination page-info="pageInfo" pagingHandle="paging()"></milo-Pagination>
+    </div>
+</div>

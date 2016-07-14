@@ -1,0 +1,32 @@
+﻿<div>
+    <form name="createForm" role="form" novalidate class="form-validation">
+        <div class="modal-header">
+            <h4 class="modal-title">                
+                <span>生成卡密</span>
+            </h4>
+        </div>
+        <div class="modal-body">
+            
+            <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                <select class="form-control" name="softLicenseOptionId" ng-class="{'edited':vm.data.softLicenseOptionId}" ng-model="vm.data.softLicenseOptionId" required>
+                    <option value=""></option>
+
+                    <option ng-repeat="item in vm.licenseOptions" value="{{item.value}}">{{item.displayText}}</option>
+                    
+                </select>
+                <label>价格类型</label>
+            </div>
+
+            <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                <input class="form-control" type="number" name="count" ng-class="{'edited':vm.data.count}" ng-model="vm.data.count" required maxlength="50">
+                <label>生成卡密数量</label>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button ng-disabled="vm.saving" type="button" class="btn btn-default" ng-click="vm.cancel()">取消</button>
+            <button type="submit" button-busy="vm.saving" busy-text="保存中..." class="btn btn-primary blue" ng-click="vm.save()" 
+                    ng-disabled="createForm.$invalid"><i class="fa fa-save"></i> <span>保存</span></button>
+        </div>
+    </form>
+</div>

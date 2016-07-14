@@ -1,0 +1,51 @@
+﻿<div class="portlet search-panel" style="border: 0px; margin-bottom: 0px;box-shadow:none">
+    <div class="portlet-body" style="margin-top: 0px">
+        
+        <div class="row search-row" ng-repeat="row in searchChoose" ng-show="$first || isExpand">
+            <!--<div class="col-md-1 search-logic" ng-if="$first">
+                <div class="alert alert-success search-title">
+                    筛选条件
+                </div>
+            </div>-->
+            <div class="col-md-3 search-field" ng-if="$first" style="padding-right: 0px;padding-left: 15px!important;">
+                <select class="bs-select form-control" ng-model="searchChoose[$index].field" id="search-field-{{$index}}">
+                    <option ng-repeat="item in searchItems" value="{{item.field}}">{{item.title}}</option>
+                </select>
+            </div>
+            <div class="col-md-1 search-logic" ng-if="!$first">
+                <select class="bs-select form-control" ng-model="searchChoose[$index].logic" >
+                    <option>AND</option>
+                    <option>OR</option>
+                </select>
+            </div>
+            <div class="col-md-2 search-field" ng-if="!$first">
+                <select class="bs-select form-control" ng-model="searchChoose[$index].field" id="search-field-{{$index}}">
+                    <option ng-repeat="item in searchItems" value="{{item.field}}">{{item.title}}</option>
+                </select>
+            </div>
+
+
+            <div class="col-md-6 search-value" ng-if="searchChoose[$index].currentValueCtrl=='text'">
+                <input type="text" class="form-control" ng-model="searchChoose[$index].value" placeholder="{{searchChoose[$index].textHint}}">
+            </div>
+            <div class="col-md-6 search-value" ng-if="searchChoose[$index].currentValueCtrl=='list'">
+                <select class="bs-select form-control" ng-model="searchChoose[$index].value" >
+                    <option ng-repeat="listitem in searchChoose[$index].listItems" value="{{listitem.id}}">{{listitem.text}}</option>
+                </select>
+            </div>
+            <div class="col-md-3 search-value" ng-if="searchChoose[$index].currentValueCtrl=='date'">
+                <input type="text" class="form-control  date-picker" ng-model="searchChoose[$index].minValue" placeholder="日期起始日期(YYYY-MM-DD)">
+            </div>
+            <div class="col-md-3 search-value" ng-if="searchChoose[$index].currentValueCtrl=='date'">
+                <input type="text" class="form-control  date-picker" ng-model="searchChoose[$index].maxValue" placeholder="日期截止日期(YYYY-MM-DD)">
+            </div>
+
+            <div class="col-md-3" ng-if="$first">
+                <div class="clearfix">
+                    <button type="button" class="btn btn-default" id="search-button-query"><i class="icon icon-magnifier"></i>查询</button>
+                    <button type="button" class="btn btn-default" ng-click="changeMoreStatus()" >更多<i class="fa fa-angle-{{isExpand?'up':'down'}}"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

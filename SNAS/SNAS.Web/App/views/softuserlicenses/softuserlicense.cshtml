@@ -1,0 +1,60 @@
+﻿<div class="portlet light bordered" ng-controller="app.views.softuserlicense as vm">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon icon-grid font-green-sharp"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">授权数据</span>
+        </div>
+        @*<div class="actions">
+                <button type="button" class="btn btn-primary" ng-click="vm.createSoftUser()"><i class="icon icon-plus"></i>添加用户</button>
+            </div>*@
+    </div>
+
+    <div class="portlet-body" style="padding-top: 0px">
+
+        <!-- BEGIN Portlet PORTLET-->
+
+
+
+        <milo-Search search-items="searchItems" search-conds="searchConds" searchHandle="queryData()"></milo-Search>
+
+        <div class="table-scrollable ">
+            <table class="table table-bordered table-hover table-striped table-advance">
+                <thead>
+                    <tr>
+                        <th style="width: 40px;text-align: center"> ID </th>
+                        <th> 用户 </th>
+                        <th style="text-align: left"> 软件 </th>
+                        <th style="width: 60px; text-align: center"> 类型 </th>
+                        <th style="width: 60px;text-align: center"> 状态 </th>
+                        <th style="width: 160px; text-align: center"> 授权时间 </th>
+                        <th style="width: 160px; text-align: center"> 到期时间 </th>
+                        <th style="width: 190px; text-align: center"> 操作 </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr role="row" ng-repeat="item in vm.items" class="even">
+                        <td style="text-align: center;vertical-align: middle">{{item.id}}</td>
+                        <td style="vertical-align: middle">{{item.loginName}}</td>
+                        <td style="vertical-align: middle">{{item.softName}}</td>
+                        <td style="text-align: center;vertical-align: middle">{{item.typeAlias}}</td>
+                        <td style="text-align: center; vertical-align: middle">{{item.isActive?'启用':'停用'}}</td>
+                        <td style="text-align: center; vertical-align: middle">{{item.authorizeTime | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <td style="text-align: center; vertical-align: middle">{{item.expireTime | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <td style="text-align: center; vertical-align: middle" class="table-operating">
+                            <a href="javascript:;" ng-click="vm.disableLicense(item.id)" style="color: red" ng-if="item.isActive">停用</a>
+                            <a href="javascript:;" ng-click="vm.enableLicense(item.id)" ng-if="!item.isActive">启用</a>
+                            <span class="divider">|</span>
+                            <a href="javascript:;" ng-click="vm.gotoLicenseMcode(item.id)">机器码</a><span class="divider">|</span>
+                            <a href="javascript:;" ng-click="vm.gotoMcodeChangeLog(item.id)">换绑记录</a>
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <milo-Pagination page-info="pageInfo" pagingHandle="paging()"></milo-Pagination>
+
+    </div>
+</div>

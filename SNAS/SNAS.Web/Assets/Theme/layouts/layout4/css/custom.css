@@ -1,0 +1,61 @@
+/* here you can put your own css to customize and override the theme */
+
+/*数据表格操作列*/
+.table-operating a {
+    /*color: blue*/
+}
+
+.table-operating span.divider {
+    color: lightgray;
+    margin-left: 3px
+}
+
+
+.search-panel .search-logic {
+    padding-right: 5px;
+}
+
+.search-panel .search-title {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    color: gray;
+    text-align: center
+}
+
+.search-panel .search-field {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.search-panel .search-field-first {
+    padding-right: 0px;
+}
+
+.search-panel .search-row {
+    margin-bottom: 5px
+}
+
+.search-panel .search-value {
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+
+.more-operating > li {
+    display: block;
+    border-radius: 3px;
+    position: relative;
+    padding: 15px;
+    background: #ecf0f1;
+    margin-bottom: 15px;
+}
+
+ .page-header.navbar .page-logo .logo-default {
+      margin: 15px 10px 0 0px;
+      }
+
+  .page-header.navbar .page-logo {
+    padding-left: 10px;
+    }
