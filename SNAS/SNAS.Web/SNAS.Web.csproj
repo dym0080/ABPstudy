@@ -238,6 +238,9 @@
   <ItemGroup>
     <Content Include="App\app.js" />
     <Content Include="App\services\appSession.js" />
+    <Content Include="App\views\dictionary\createModal.js" />
+    <Content Include="App\views\dictionary\editModal.js" />
+    <Content Include="App\views\dictionary\diclist.js" />
     <Content Include="App\views\finances\finance.js" />
     <Content Include="App\views\home\home.js" />
     <Content Include="App\views\layout\chgPassword.js" />
@@ -5303,6 +5306,10 @@
     <Content Include="App\views\softuserlicenses\mcodechangelog.cshtml" />
     <Content Include="App\views\layout\chgPassword.cshtml" />
     <Content Include="App\views\softusers\chgPassword.cshtml" />
+    <Content Include="App\views\dictionary\createModal.cshtml" />
+    <Content Include="App\views\dictionary\editModal.cshtml" />
+    <Content Include="App\views\dictionary\diclist.cshtml" />
+    <None Include="Properties\PublishProfiles\sansfb.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

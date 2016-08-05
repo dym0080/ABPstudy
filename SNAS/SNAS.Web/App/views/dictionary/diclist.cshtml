@@ -1,0 +1,51 @@
+﻿<div class="portlet light bordered" ng-controller="app.views.soft as vm">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon icon-grid font-green-sharp"></i>
+            <span class="caption-subject font-green-sharp bold uppercase">软件列表</span>
+        </div>
+        <div class="actions">
+            <button type="button" class="btn btn-primary" ng-click="vm.createSoft()"><i class="icon icon-plus"></i>添加软件</button>
+        </div>
+    </div>
+
+    <div class="portlet-body" style="padding-top: 0px">
+        <!-- BEGIN Portlet PORTLET-->
+        <milo-Search search-items="searchItems" search-conds="searchConds" searchHandle="queryData()"></milo-Search>
+        <div class="dataTables_wrapper no-footer">
+            <div class="table-scrollable ">
+                <table class="table table-bordered table-hover table-striped table-advance">
+                    <thead>
+                        <tr>
+                            <th style="width: 40px;text-align: center"> ID </th>
+                            <th style="width: 150px;text-align: center"> 字典类型 </th>
+                            <th style="width: 150px;text-align: center"> 字典名称 </th>
+                            <th style="width: 100px;text-align: center"> 字典值 </th>
+                            <th style="width: 80px;text-align: center"> 字典描述 </th>
+                            <th style="width: 180px; text-align: center"> 字典排序 </th>
+                            <th style="width: 180px; text-align: center"> 配置 </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr role="row" ng-repeat="item in vm.items" class="even">
+                            <td style="text-align: center;vertical-align: middle">{{item.id}}</td>
+                            <td style="vertical-align: middle">{{item.Type}}</td>
+                            <td style="text-align: center;vertical-align: middle">{{item.Name}}</td>
+                            <td style="text-align: center;vertical-align: middle">{{item.Value}}</td>
+                            <td style="text-align: center;vertical-align: middle">{{item.Description}}</td>
+                            <td style="text-align: center; vertical-align: middle" class="table-operating">
+                                <a href="javascript:;" ng-click="vm.edit(item.id)">修改</a><span class="divider">|</span>
+                                <a href="javascript:;" ng-click="vm.delete(item.id)">删除</a><span class="divider">|</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <milo-Pagination page-info="pageInfo" pagingHandle="paging()"></milo-Pagination>
+
+            
+        </div>
+    </div>
+</div>

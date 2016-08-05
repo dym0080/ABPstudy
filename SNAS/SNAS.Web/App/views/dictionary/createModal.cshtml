@@ -1,0 +1,41 @@
+﻿<div>
+    <form name="createForm" role="form" novalidate class="form-validation">
+        <div class="modal-header">
+            <h4 class="modal-title">                
+                <span>添加软件</span>
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                <input class="form-control" type="text" name="name" ng-class="{'edited':vm.data.name}" ng-model="vm.data.name" required maxlength="50">
+                <label>软件名称</label>
+            </div>
+            <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                <select class="form-control" name="bindmode" ng-class="{'edited':vm.data.bindmode}" ng-model="vm.data.bindmode" required>
+                    <option value=""></option>
+                    <option value="0">不绑定机器</option>
+                    <option value="1">绑定机器</option>                    
+                </select>
+                <label>绑定模式</label>
+            </div>
+            <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                <select class="form-control" name="runmode" ng-class="{'edited':vm.data.runmode}" ng-model="vm.data.runmode" required>
+                    <option value=""></option>
+                    <option value="0">免费</option>
+                    <option value="1">收费</option>
+                </select>
+                <label>运营模式</label>
+            </div>
+            <div class="form-group form-md-line-input">
+                <textarea class="form-control" rows="3" ng-class="{'edited':vm.data.remark}" ng-model="vm.data.remark"></textarea>
+                <label for="form_control_1">备注</label>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button ng-disabled="vm.saving" type="button" class="btn btn-default" ng-click="vm.cancel()">取消</button>
+            <button type="submit" button-busy="vm.saving" busy-text="保存中..." class="btn btn-primary blue" ng-click="vm.save()" 
+                    ng-disabled="createForm.$invalid"><i class="fa fa-save"></i> <span>保存</span></button>
+        </div>
+    </form>
+</div>

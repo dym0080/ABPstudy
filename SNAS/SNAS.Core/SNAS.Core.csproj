@@ -82,6 +82,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dictionarys\Dictionary.cs" />
     <Compile Include="Finances\Finance.cs" />
     <Compile Include="Finances\FinanceType.cs" />
     <Compile Include="SNASConsts.cs" />

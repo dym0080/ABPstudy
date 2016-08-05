@@ -113,6 +113,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoMapper\SoftProfile.cs" />
+    <Compile Include="Dictionarys\DictionaryAppService.cs" />
+    <Compile Include="Dictionarys\Dto\DictionaryCreateInput.cs" />
+    <Compile Include="Dictionarys\Dto\DictionaryEditInput.cs" />
+    <Compile Include="Dictionarys\Dto\DictionaryListDto.cs" />
+    <Compile Include="Dictionarys\Dto\GetDictionayPageListInput.cs" />
+    <Compile Include="Dictionarys\IDictionaryAppService.cs" />
     <Compile Include="Finances\Dto\FinanceListDto.cs" />
     <Compile Include="Finances\FinanceAppService.cs" />
     <Compile Include="Finances\IFinanceAppService.cs" />

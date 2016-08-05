@@ -42,6 +42,11 @@
                     templateUrl: '/App/views/soft/soft.cshtml',
                     menu: 'Soft'
                 })
+                .state('dictionary', {
+                    url: '/dictionary',
+                    templateUrl: '/App/views/dictionary/diclist.cshtml',
+                    menu: 'Dictionary'
+                })
                 .state('softlicenseoption', {
                     url: '/softlicenseoption/:softId',
                     templateUrl: '/App/views/soft/softlicenseoption.cshtml',

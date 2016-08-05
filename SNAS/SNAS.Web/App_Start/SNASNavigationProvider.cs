@@ -66,6 +66,12 @@ namespace SNAS.Web
                                 "Softuserlogin",
                                 L("登录记录"),
                                 url: "softuserlogin"
+                                )).
+                        AddItem(
+                            new MenuItemDefinition(
+                                "DictionaryManage",
+                                L("字典项管理"),
+                                url: "dictionary"
                                 ))
                 );
         }

@@ -8,6 +8,7 @@ using SNAS.Core.SoftLicenses;
 using SNAS.Core.Softs;
 using SNAS.Core.SoftUsers;
 using SNAS.Core.Finances;
+using SNAS.Core.Dictionarys;
 
 namespace SNAS.EntityFramework
 {
@@ -19,6 +20,11 @@ namespace SNAS.EntityFramework
         /// 软件
         /// </summary>
         public virtual IDbSet<Soft> Softs { get; set; }
+
+        /// <summary>
+        /// 字典
+        /// </summary>
+        public virtual IDbSet<Dictionary> Dictionarys { get; set; }
 
         /// <summary>
         /// 软件注册配置
