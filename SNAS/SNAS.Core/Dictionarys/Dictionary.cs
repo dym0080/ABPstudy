@@ -1,4 +1,5 @@
 ﻿using Abp.Domain.Entities;
+using Abp.Domain.Entities.Auditing;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 namespace SNAS.Core.Dictionarys
 {
     [Table("Dictionary")]
-    public class Dictionary:Entity, ISoftDelete
+    public class Dictionary: AuditedEntity<long>, ISoftDelete
     {
         public const int MaxLenght50 = 50;
         public const int MaxLenght200 = 200;

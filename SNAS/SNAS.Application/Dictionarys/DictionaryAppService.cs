@@ -15,9 +15,9 @@ namespace SNAS.Application.Dictionarys
 {
     public class DictionaryAppService: SNASAppServiceBase,IDictionaryAppService
     {
-        private readonly IRepository<Dictionary> _dicRepository;
+        private readonly IRepository<Dictionary,long> _dicRepository;
 
-        public DictionaryAppService(IRepository<Dictionary> dicRepository)
+        public DictionaryAppService(IRepository<Dictionary,long> dicRepository)
         {
             _dicRepository = dicRepository;
         }
@@ -28,6 +28,7 @@ namespace SNAS.Application.Dictionarys
             var where = FilterExpression.FindByGroup<Dictionary>(input.Filter);
             var count = await query.Where(where).CountAsync();
             var list = await query.Where(where)
+                .OrderByDescending(t => t.CreationTime)
                 .PageBy(input)
                 .ToListAsync();
 

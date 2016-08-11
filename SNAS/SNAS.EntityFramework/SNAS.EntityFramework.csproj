@@ -109,6 +109,14 @@
     <Compile Include="Migrations\201608050919358_as.Designer.cs">
       <DependentUpon>201608050919358_as.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608110611469_af.cs" />
+    <Compile Include="Migrations\201608110611469_af.Designer.cs">
+      <DependentUpon>201608110611469_af.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608110632242_aa.cs" />
+    <Compile Include="Migrations\201608110632242_aa.Designer.cs">
+      <DependentUpon>201608110632242_aa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SNASDataModule.cs" />
     <Compile Include="Migrations\SeedData\DefaultEditionsBuilder.cs" />
@@ -154,6 +162,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608050919358_as.resx">
       <DependentUpon>201608050919358_as.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608110611469_af.resx">
+      <DependentUpon>201608110611469_af.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608110632242_aa.resx">
+      <DependentUpon>201608110632242_aa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
